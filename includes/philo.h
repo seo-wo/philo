@@ -6,7 +6,7 @@
 /*   By: seowokim <seowokim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 20:15:04 by seowokim          #+#    #+#             */
-/*   Updated: 2022/11/07 20:54:53 by seowokim         ###   ########seoul.kr  */
+/*   Updated: 2022/11/07 21:23:35 by seowokim         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 typedef struct s_philo
 {
 	pthread_t	thread;
+	int			n;
 }	t_philo;
 
 typedef struct s_data
