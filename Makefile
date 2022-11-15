@@ -6,7 +6,7 @@
 #    By: seowokim <seowokim@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 20:45:57 by seowokim          #+#    #+#              #
-#    Updated: 2022/11/09 15:08:10 by seowokim         ###   ########seoul.kr   #
+#    Updated: 2022/11/11 17:40:30 by seowokim         ###   ########seoul.kr   #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ help :
 	@echo "\033[0;35m\ttime_to_eat (in milliseconds): \033[0;36mThe time it takes for a philosopher to eat. During that time, they will need to hold two forks."
 	@echo "\033[0;35m\ttime_to_sleep (in milliseconds): \033[0;36mThe time a philosopher will spend sleeping."
 	@echo "\033[0;35m\tnumber_of_times_each_philosopher_must_eat (optional argument): \033[0;36mIf all philosophers have eaten at least number_of_times_each_philosopher_must_eat times, the simulation stops.\n\t\t\t\t\t\t\t\t\tIf not specified, the simulation stops when a philosopher dies."
-	@echo "\033[0;31m\tREMIND : range of inputs should be 0 < n < 2147483648, without any signs"
+	@echo "\033[0;31m\tREMIND : range of inputs should be 1 < n < 2147483648, without any signs"
 
 clean :
 	@$(RMDIR) $(OBJS_DIR)

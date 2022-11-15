@@ -6,7 +6,7 @@
 /*   By: seowokim <seowokim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 20:46:42 by seowokim          #+#    #+#             */
-/*   Updated: 2022/11/07 20:43:12 by seowokim         ###   ########seoul.kr  */
+/*   Updated: 2022/11/14 13:05:24 by seowokim         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ int	main(int argc, char *argv[])
 		exit = set_arg(argv, 1, data);
 	if (exit == 0)
 		return (EXIT_FAILURE);
+	init_philo(data);
+	print_status(data, EAT);
 	return (EXIT_SUCCESS);
 }

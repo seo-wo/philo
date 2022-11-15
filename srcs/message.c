@@ -6,11 +6,15 @@
 /*   By: seowokim <seowokim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:03:35 by seowokim          #+#    #+#             */
-/*   Updated: 2022/11/07 21:12:52 by seowokim         ###   ########seoul.kr  */
+/*   Updated: 2022/11/15 15:38:07 by seowokim         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/philo.h"
+
+void	error_ctl(t_data *data)
+{
+}
 
 int	print_error(char *str, t_data *data)
 {
@@ -23,6 +27,15 @@ int	print_error(char *str, t_data *data)
 	return (0);
 }
 
-void	print_status(t_philo *philo, char *str)
+void	print_status(t_data *data, char *str)
 {
+	int	i;
+
+	i = 0;
+	while (i < data -> num_p)
+	{
+		printf("%d : %d\n", data -> fork[i].left, data -> fork[i].right);
+		i++;
+	}
+	printf("%s\n", str);
 }
