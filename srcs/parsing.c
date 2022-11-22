@@ -6,7 +6,7 @@
 /*   By: seowokim <seowokim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:45:22 by seowokim          #+#    #+#             */
-/*   Updated: 2022/11/07 20:48:29 by seowokim         ###   ########seoul.kr  */
+/*   Updated: 2022/11/22 12:26:35 by seowokim         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ int	ft_atoi(char *str)
 
 	i = 0;
 	ret = 0;
+	if (str[i] == '+')
+		i++;
 	while (str[i])
 	{
 		if (is_digit(str[i]))
