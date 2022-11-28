@@ -1,6 +1,11 @@
 # ignore .vscode dir
 .vscode/
 
-# ignore test code & .out file
+# ignore test code
 *.out
 test.c
+temp
+
+# ignore obj files & philo
+philo
+objs/
