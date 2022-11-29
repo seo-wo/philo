@@ -6,7 +6,7 @@
 /*   By: seowokim <seowokim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:45:22 by seowokim          #+#    #+#             */
-/*   Updated: 2022/11/22 12:26:35 by seowokim         ###   ########seoul.kr  */
+/*   Updated: 2022/11/29 15:20:37 by seowokim         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,15 @@
 void	init_data(t_data *data)
 {
 	data -> num_p = 0;
-	data -> num_p = 0;
+	data -> num_e = 0;
 	data -> time_d = 0;
 	data -> time_e = 0;
 	data -> time_s = 0;
+	data -> fin_num = 0;
+	data -> fin = 0;
 }
 
-static int	is_digit(char c)
+int	is_digit(char c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);

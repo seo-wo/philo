@@ -6,7 +6,7 @@
 /*   By: seowokim <seowokim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 15:07:46 by seowokim          #+#    #+#             */
-/*   Updated: 2022/11/29 14:57:35 by seowokim         ###   ########seoul.kr  */
+/*   Updated: 2022/11/29 15:50:33 by seowokim         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	my_sleep(int ms)
 	time = timestamp() + ms;
 	while (time > timestamp())
 	{
+		usleep(100);
 	}
 }
 

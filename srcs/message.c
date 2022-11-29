@@ -6,15 +6,11 @@
 /*   By: seowokim <seowokim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:03:35 by seowokim          #+#    #+#             */
-/*   Updated: 2022/11/15 15:38:07 by seowokim         ###   ########seoul.kr  */
+/*   Updated: 2022/11/29 14:11:35 by seowokim         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/philo.h"
-
-void	error_ctl(t_data *data)
-{
-}
 
 int	print_error(char *str, t_data *data)
 {
@@ -27,15 +23,31 @@ int	print_error(char *str, t_data *data)
 	return (0);
 }
 
-void	print_status(t_data *data, char *str)
+void	print_status(t_philo *philo, char *str)
 {
-	int	i;
+	long long		time;
+	struct timeval	now;
 
-	i = 0;
-	while (i < data -> num_p)
+	pthread_mutex_lock(&(philo -> data -> m_print));
+	if (philo -> data -> fin)
 	{
-		printf("%d : %d\n", data -> fork[i].left, data -> fork[i].right);
-		i++;
+		pthread_mutex_unlock(&(philo -> data -> m_print));
+		return ;
 	}
-	printf("%s\n", str);
+	gettimeofday(&now, NULL);
+	time = time_cal(now, philo -> data -> start);
+	printf("%lld [%d] %s\n", time, philo -> id, str);
+	pthread_mutex_unlock(&(philo -> data -> m_print));
+}
+
+void	print_eat(t_philo *philo, char *str)
+{
+	long long		time;
+
+	pthread_mutex_lock(&(philo -> data -> m_print));
+	gettimeofday(&(philo -> last_eat), NULL);
+	time = time_cal(philo -> last_eat, philo -> data -> start);
+	printf("%lld [%d] %s\t (%d time(s))\n", time, \
+			philo -> id, str, philo -> eat + 1);
+	pthread_mutex_unlock(&(philo -> data -> m_print));
 }
