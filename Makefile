@@ -6,7 +6,7 @@
 #    By: seowokim <seowokim@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 20:45:57 by seowokim          #+#    #+#              #
-#    Updated: 2022/11/28 14:12:20 by seowokim         ###   ########seoul.kr   #
+#    Updated: 2022/11/28 15:08:49 by seowokim         ###   ########seoul.kr   #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ SRCS = acting.c \
 	parsing.c \
 	philo.c \
 	thread.c \
+	time.c	\
 
 OBJ = $(SRCS:.c=.o)
 OBJS = $(addprefix $(OBJS_DIR)/, $(OBJ))
